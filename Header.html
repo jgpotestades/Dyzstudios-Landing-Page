@@ -1,0 +1,146 @@
+
+<!--Header-->
+<div class="wrapper">
+	
+	<!--linear gradient-->
+	<div class="multi_color_border"></div>
+	
+
+	<!--Top navbar-->
+	<div class="top_nav top_nav-expand-sm" role="navigation">
+        <div class="left">
+          <div class="logo">
+				<p>
+				  <span>
+					<a href="Index.html">
+						  <img src="Logo/logo.PNG" width="180" height="85">
+					</a>
+				  </span>
+				</p>
+		  </div>
+          <div class="search_bar">
+              <input type="text" placeholder="Search">
+          </div>
+      	</div> 
+
+		<div class="right">
+        <ul>
+          <li><a href="Newsroom.html">Newsroom</a></li>
+          <li><a href="Careers.html">Careers</a></li>
+          <li><a href="Signin.html">Sign In</a></li>
+        </ul>
+    	</div>
+    </div>
+
+	<!--Bottom navbar-->
+	<div class="bottom_nav bottom_nav-expand-sm" role="navigation">
+      <ul>
+		<br>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="Portfolio.html">Portfolio</a></li>
+        <li><a href="Community.html">Community</a></li>
+        <li><a href="Contact.html">Contact Us</a></li>
+      </ul>
+  	</div>
+</div>
+
+
+
+/**********************/
+/****Navigation Bar****/
+/**********************/
+
+.wrapper .multi_color_border{
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(to right, #66adff 0% , #66adff 25%, #494949 25%, #494949 50%, #66adff 50%, #66adff 75%, #494949 75%, #494949 100%);
+}
+
+.wrapper .top_nav{
+  margin-top: 5px;
+  width: 100%;
+  height: 65px;
+  background: black;
+  padding: 0 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .top_nav .left{
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .top_nav .left .logo p img{
+  position: center;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]{
+  border: 1px solid #666666;
+  padding: 5px 10px; 
+  outline: none;
+  transition: all 0.5s linear;
+}
+
+.wrapper .top_nav .left .search_bar input[type="text"]:focus{
+  width: 250px;
+}
+
+.wrapper .top_nav .right ul{
+  display: flex;
+}
+
+.wrapper .top_nav .right ul li{
+  margin: 0 12px;
+}
+
+.wrapper .top_nav .right ul li:last-child{
+  background:  #66adff;
+  margin-right: 0;
+  border-radius: 2px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.wrapper .top_nav .right ul li:hover:last-child{
+  background: #494949;
+}
+
+.wrapper .top_nav .right ul li a{
+  display: block;
+  padding: 8px 10px;
+  color: white;
+}
+
+.wrapper .top_nav .right ul li:last-child a{
+   color: #fff;
+}
+
+.wrapper .bottom_nav{
+  width: 100%;
+  background: #f9f9f9;
+  height: 45px;
+  padding: 0 50px;
+}
+
+.wrapper .bottom_nav ul{
+  width: 100%;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.wrapper .bottom_nav ul li a{
+  color: #494949;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.wrapper .banner img{
+  width: 100%;
+  height: 400px;
+}

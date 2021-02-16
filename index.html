@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dyzstudios PH</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8">
+
+	<!--CSS Libraries-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+	<link rel="icon" href="Logo/logo.PNG"> <!--Website icon-->
+	<link href="lib/slick/slick.css" rel="stylesheet">
+    <link href="libs/slick/slick-theme.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+	<!--Template sheet-->
+	<link rel="stylesheet" href="styles.css">
+	
+</head>
+
+<body>
+
+<!-- Header Start -->
+<div class="header">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-lg-2">
+				<div class="brand">
+					<a href="index.html">
+						<img src="Logo/logo.png" alt="Logo">
+					</a>
+				</div>
+			</div>
+			<div class="col-lg-10">
+				<div class="topbar">
+					<div class="topbar-col">
+						<a href="tel:+63956-283-xxxx"><i class="fa fa-phone-alt"></i>+63956-283-xxxx</a>
+					</div>
+					<div class="topbar-col">
+						<a href="mailto:info@dyzstudios.com"><i class="fa fa-envelope"></i>info@dyzstudios.com</a>
+					</div>
+					<div class="topbar-col">
+						<div class="topbar-social">
+							<a href=""><i class="fab fa-twitter"></i></a>
+							<a href="https://www.facebook.com/dyzstudiosph"><i class="fab fa-facebook-f"></i></a>
+							<a href=""><i class="fab fa-youtube"></i></a>
+							<a href=""><i class="fab fa-instagram"></i></a>
+							<a href=""><i class="fab fa-linkedin-in"></i></a>
+						</div>
+					</div>
+					<div class="topbar-col">
+						<a href="Signin.html">Login</a>
+					</div>
+				</div>
+				<div class="navbar navbar-expand-lg bg-light navbar-light">
+					<a href="#" class="navbar-brand">MENU</a>
+					<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+
+					<div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+						<div class="navbar-nav ml-auto">
+							<a href="index.html" class="nav-item nav-link">Home</a>
+							<a href="About.html" class="nav-item nav-link">About Us</a>
+							<a href="Services.html" class="nav-item nav-link">Services</a>
+							<a href="Portfolio.html" class="nav-item nav-link">Portfolio</a>
+							<a href="Community.html" class="nav-item nav-link">Community</a>
+							<a href="Newsroom.html" class="nav-item nav-link">Newsroom</a>
+							<a href="Careers.html" class="nav-item nav-link">Careers</a>
+
+							<a href="Contact.html" class="nav-item nav-link">Contact Us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Header End -->
+
+<!--content-->
+<div class="jumbotron text-center" >
+	<div id="demo" class="carousel slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ul class="carousel-indicators">
+		  <li data-target="#demo" data-slide-to="0" class="active"></li>
+		  <li data-target="#demo" data-slide-to="1"></li>
+		  <li data-target="#demo" data-slide-to="2"></li>
+		</ul>
+		
+		<!-- The slideshow -->
+		<div class="carousel-inner">
+		  <div class="carousel-item active">
+			<img src="Images/Dyzstudios.png" alt="Integrate">
+		  </div>
+		  <div class="carousel-item">
+			<img src="Images/Dyzstudios (1).png" alt="Design">
+		  </div>
+		  <div class="carousel-item">
+			<img src="Images/Dyzstudios (2).png" alt="Innovate">
+		  </div>
+		</div>
+		
+		<!-- Left and right controls -->
+		<a class="carousel-control-prev" href="#demo" data-slide="prev">
+		  <span class="carousel-control-prev-icon"></span>
+		</a>
+		<a class="carousel-control-next" href="#demo" data-slide="next">
+		  <span class="carousel-control-next-icon"></span>
+		</a>
+	</div>
+  <h4><br><a href="About.html">More About Dyzstudios ></a></h4> 
+</div>
+
+<!-- About Start -->
+<div class="about">	
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<div id="video-section">
+					<div class="youtube-player" data-id="AuVHftBiDVw"></div>
+					
+					<script>
+						document.addEventListener("DOMContentLoaded",
+							function() {
+								var div, n,
+									v = document.getElementsByClassName("youtube-player");
+								for (n = 0; n < v.length; n++) {
+									div = document.createElement("div");
+									div.setAttribute("data-id", v[n].dataset.id);
+									div.innerHTML = labnolThumb(v[n].dataset.id);
+									div.onclick = labnolIframe;
+									v[n].appendChild(div);
+								}
+							});
+
+						function labnolThumb(id) {
+							var thumb = '<img src="Images/poster.jpg">',
+								play = '<div class="play"><img src="images/play.png"></div>';
+							return thumb.replace("ID", id) + play;
+						}
+
+						function labnolIframe() {
+							var iframe = document.createElement("iframe");
+							var embed = "https://www.youtube.com/embed/ID?autoplay=1";
+							iframe.setAttribute("src", embed.replace("ID", this.dataset.id));
+							iframe.setAttribute("frameborder", "0");
+							iframe.setAttribute("allowfullscreen", "1");
+							this.parentNode.replaceChild(iframe, this);
+						}
+					</script>
+				</div>
+			</div>
+			<div class="col-md-6">
+				<h2 class="section-title">Learn About Us</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+				</p>
+				<a class="btn" href="About.html">Learn More</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- About End -->
+
+<!-- Service Start -->
+<div class="service">
+	<div class="container-fluid">
+		<div class="section-header">
+			<h2>Our Services</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium ornare velit non</p>
+		</div>
+		<div class="row">
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Web Design</h3>
+					<img src="Images/icon-service-1.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Development</h3>
+					<img src="Images/icon-service-2.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>UI Design</h3>
+					<img src="Images/icon-service-3.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Programming</h3>
+					<img src="Images/icon-service-4.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Graphic Design</h3>
+					<img src="Images/icon-service-5.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Video Editing</h3>
+					<img src="Images/icon-service-6.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>SEO</h3>
+					<img src="Images/icon-service-7.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+			<div class="col-lg-3 col-md-6">
+				<div class="service-item">
+					<h3>Online Marketing</h3>
+					<img src="Images/icon-service-8.png" alt="Service">
+					<p>Lorem ipsum dolor sit amet elit pretium ornare</p>
+				</div>
+			</div>
+
+			</div>
+				<a class="btn" href="Services.html">More about our services</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Service End -->
+
+
+<!-- FAQs Start -->
+<div class="faqs">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<h2 class="section-title">Frequently Asked Questions</h2>
+				<div id="accordion">
+					<div class="card">
+						<div class="card-header">
+							<a class="card-link collapsed" data-toggle="collapse" href="#collapseOne" aria-expanded="false">
+								Lorem ipsum dolor sit amet?
+							</a>
+						</div>
+						<div id="collapseOne" class="collapse" data-parent="#accordion">
+							<div class="card-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<a class="card-link" data-toggle="collapse" href="#collapseTwo">
+								Lorem ipsum dolor sit amet?
+							</a>
+						</div>
+						<div id="collapseTwo" class="collapse" data-parent="#accordion">
+							<div class="card-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<a class="card-link" data-toggle="collapse" href="#collapseThree">
+								Lorem ipsum dolor sit amet?
+							</a>
+						</div>
+						<div id="collapseThree" class="collapse" data-parent="#accordion">
+							<div class="card-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
+							</div>
+						</div>
+					</div>
+					<div class="card">
+						<div class="card-header">
+							<a class="card-link" data-toggle="collapse" href="#collapseFour">
+								Lorem ipsum dolor sit amet?
+							</a>
+						</div>
+						<div id="collapseFour" class="collapse" data-parent="#accordion">
+							<div class="card-body">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non.
+							</div>
+						</div>
+					</div> 
+				</div>
+				<a class="btn" href="Contact.html">Ask more</a>
+			</div>
+			<div class="col-md-6">
+				<img src="Images/faqs.jpg" alt="Image">
+			</div>
+		</div>
+	</div>
+</div>
+<!-- FAQs End -->
+
+<!-- Testimonial Start -->
+<div class="testimonial">
+	<div class="containe
+		<div class="section-header">
+			<h2>Clients Review</h2>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium ornare velit non</p>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="testimonial-slider-nav">
+					<div class="slider-nav"><img src="Images/testimonial-1.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-2.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-3.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-4.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-1.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-2.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-3.jpg" alt="Testimonial"></div>
+					<div class="slider-nav"><img src="Images/testimonial-4.jpg" alt="Testimonial"></div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12">
+				<div class="testimonial-slider">
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+					<div class="slider-item">
+						<h3>Customer Name</h3>
+						<h4>profession</h4>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Testimonial End -->
+
+<!-- News Start -->
+<div class="news">
+	<div class="container-fluid">
+		<div class="row align-items-center">
+			<div class="col-md-6">
+				<img src="Images/news.jpg" alt="Image">
+			</div>
+			<div class="col-md-6">	
+				<h2 class="section-title">Read Latest News</h2>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+				</p>
+				<p>
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulputate. Aliquam metus tortor, auctor id gravida condimentum, viverra quis sem. Curabitur non nisl nec nisi scelerisque maximus. Aenean consectetur convallis porttitor. Aliquam interdum at lacus non blandit.
+				</p>
+				<a class="btn" href="Newsroom.html">Read More</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- News End -->
+
+<!-- JavaScript Libraries -->
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+<script src="lib/slick/slick.min.js"></script>
+<script src="lib/isotope/isotope.pkgd.min.js"></script>
+<script src="lib/lightbox/js/lightbox.min.js"></script>
+
+<!-- Template Javascript -->
+<script src="js/main.js"></script>
+
+</body>
+</html>
